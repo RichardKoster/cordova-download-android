@@ -1,4 +1,4 @@
-package com.sition.adPlayer.plugins;
+package com.sition.plugins;
 
 import android.util.Log;
 import org.apache.cordova.CallbackContext;
