@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.sition.downloadplugin"
+      version="0.1.0">
+    <name>DownloadPlugin</name>
+    <description>Plugin to download files</description>
+    <license>MIT</license>
+    <keywords>phonegap,download</keywords>
+
+
+    <js-module src="www/download.js" name="DownloadPlugin">
+        <clobbers target="window.downloadplugin" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="DownloadPlugin">
+                <param name="android-package" value="com.sition.adPlayer.DownloadPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/Calendar.java" target-dir="src/com/sition/downloadplugin" />      
+     </platform>          
+</plugin>
