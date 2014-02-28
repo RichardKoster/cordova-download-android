@@ -20,6 +20,6 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/DownloadPlugin.java" target-dir="src/com/sition/downloadplugin" />      
+        <source-file src="src/android/DownloadPlugin.java" target-dir="src/com/sition/plugins" />      
      </platform>          
 </plugin>
