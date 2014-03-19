@@ -23,6 +23,8 @@ import java.net.URL;
 public class DownloadPlugin extends CordovaPlugin {
 
     protected String DOWNLOADACTION = "download";
+	protected String LOGTAG = "Web Console";
+
 
     @Override
     public boolean execute(String action, final JSONArray args, final CallbackContext callbackContext) throws JSONException {
