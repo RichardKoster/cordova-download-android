@@ -57,6 +57,8 @@ public class DownloadPlugin extends CordovaPlugin {
                                 ops.write(data, 0, count);
                             }
                         }
+						Log.d(LOGTAG, "done " + filename);
+                        webView.loadUrl("javascript:replaceWithRecentDownload('"+filename+"')");
                         callbackContext.success();
                         return;
                     } catch (IOException e) {
