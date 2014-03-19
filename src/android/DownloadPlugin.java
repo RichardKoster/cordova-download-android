@@ -45,7 +45,7 @@ public class DownloadPlugin extends CordovaPlugin {
 
                         InputStream ips = connection.getInputStream();
                         String uri = (String) args.getString(0);
-                        String filename = uri.substring(uri.lastIndexOf("/") + 1);
+                        final String filename = uri.substring(uri.lastIndexOf("/") + 1);
                         OutputStream ops = new FileOutputStream("/sdcard/adplayer/tmp/" + filename);
 
                         byte data[] = new byte[4096];
