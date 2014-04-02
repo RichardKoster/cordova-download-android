@@ -64,6 +64,7 @@ public class DownloadPlugin extends CordovaPlugin {
                             @Override
                             public void run() {
                                 webView.loadUrl("javascript:replaceWithRecentDownload('"+filename+"')");
+								webView.loadUrl("javascript:$('#mainVid')[0].play()");
                             }
                         });
                         callbackContext.success();
