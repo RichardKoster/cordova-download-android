@@ -6,7 +6,7 @@ var PlayPlugin = function(){
 }
 PlayPlugin.play=function(){
     logger(3, "play");
-    Cordova.exec("VideoPlayerPlugin", "play",null, null);
+    Cordova.exec(successCallBack, errorCallBack, "VideoPlayerPlugin", "play");
 };
 
 module.exports = PlayPlugin();
