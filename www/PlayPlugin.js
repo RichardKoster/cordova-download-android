@@ -9,4 +9,4 @@ PlayPlugin.play=function(){
     Cordova.exec(successCallBack, errorCallBack, "VideoPlayerPlugin", "play");
 };
 
-module.exports = PlayPlugin();
+module.exports = PlayPlugin;
