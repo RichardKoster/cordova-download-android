@@ -19,8 +19,6 @@ public class VideoPlayerPlugin extends CordovaPlugin{
                             webView.loadUrl("javascript:$('#mainVid')[0].play()");
                         }
                     });
-                    Log.d("ADPLAYERPLAY", "speule man");
-
                 }
             });
             return true;
