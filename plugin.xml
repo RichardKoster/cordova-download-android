@@ -11,6 +11,9 @@
     <js-module src="www/download.js" name="DownloadPlugin">
         <clobbers target="window.downloadplugin" />
     </js-module>
+	<js-module src="www/PlayPlugin.js" name="VideoPlayerPlugin">
+		<clobbers target="window.videoplayplugin" />
+	</js-module>
 
     <!-- android -->
     <platform name="android">
@@ -18,8 +21,12 @@
             <feature name="DownloadPlugin">
                 <param name="android-package" value="com.sition.plugins.DownloadPlugin"/>
             </feature>
+			<feature name="VideoPlayerPlugin">
+				<param name="android-package" value="com.sition.plugins.VideoPlayerPlugin"/>
+			</feature>
         </config-file>
 
-        <source-file src="src/android/DownloadPlugin.java" target-dir="src/com/sition/plugins" />      
+        <source-file src="src/android/DownloadPlugin.java" target-dir="src/com/sition/plugins" /> 
+		<source-file src="src/android/VideoPlayerPlugin.java" target-dir="src/com/sition/plugins"/>
      </platform>          
 </plugin>
