@@ -10,8 +10,21 @@ public class VideoPlayerPlugin extends CordovaPlugin{
     @Override
     public boolean execute(String action, final JSONArray args, final CallbackContext callbackContext) throws JSONException {
         if(action.equals("play")){
-            webView.loadUrl("javascript:$('#mainVid')[0].play()");
+            cordova.getThreadPool().execute(new Runnable() {
+                @Override
+                public void run() {
+                    cordova.getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            webView.loadUrl("javascript:$('#mainVid')[0].play()");
+                        }
+                    });
+                    Log.d("ADPLAYERPLAY", "speule man");
+
+                }
+            });
+            return true;
         }
-        return super.execute(action, args, callbackContext);
+        return false;
     }
 }
